@@ -1,37 +1,42 @@
+以下是针对 Telegram 链接预览格式优化后的版本：
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Test Page</title>
+  <title>Security Research — Link Preview Probe</title>
 
-  <!-- Open Graph — Telegram 预览爬虫优先读取 og:image，会直接请求该 URL -->
-  <meta property="og:title"       content="Security Test">
-  <meta property="og:description" content="Telegram link preview probe">
-  <meta property="og:image"       content="https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d/pixel.png">
-  <meta property="og:image:width"  content="1">
-  <meta property="og:image:height" content="1">
+  <!-- ✅ Telegram 优先读取 og:title / og:description / og:image -->
+  <!-- Telegram 爬虫 (TelegramBot) 遵循 Open Graph 协议 -->
+  <meta property="og:site_name"   content="Security Lab">
   <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Security Research Page">
+  <meta property="og:description" content="Link preview crawler behavior analysis">
 
-  <!-- Twitter Card（部分客户端回落读取） -->
-  <meta name="twitter:card"  content="summary_large_image">
-  <meta name="twitter:image" content="https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d/pixel.png">
+
+  <meta property="og:image"        content="https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d/og-image.jpg">
+  <meta property="og:image:type"   content="image/jpeg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"    content="Preview image">
+  <meta property="og:url"          content="https://your-domain.example.com/">
+
+  <!-- Twitter Card 兜底（部分客户端 fallback） -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Security Research Page">
+  <meta name="twitter:description" content="Link preview crawler behavior analysis">
+  <meta name="twitter:image"       content="https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d/tw-image.jpg">
 </head>
 <body>
-  <h1>Security Test Page</h1>
-  <p>Testing Telegram link preview crawler IP behavior.</p>
+  <h1>Security Research — Link Preview Probe</h1>
+  <p>Observing Telegram link preview crawler (TelegramBot) IP and request headers.</p>
 
-  <!--
-    双重触发：
-    1. og:image — 爬虫解析 HTML 时读取并请求图片
-    2. img 标签 — 浏览器渲染时也会发起请求（对比两次 IP）
-  -->
   <img
-    src="https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d/pixel.png"
-    width="1"
-    height="1"
-    alt=""
-    style="position:absolute;opacity:0;"
+    src="https://webhook.site/e9e844db-3b29-4be9-95cd-1da788c74d7d/browser-pixel.png"
+    width="1" height="1" alt=""
+    style="position:absolute;top:-9999px;left:-9999px;"
   >
 </body>
 </html>
